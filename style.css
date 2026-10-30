@@ -157,7 +157,7 @@ body {
     /* ^ Attach the keyframe animation */
     animation-timeline: view();
     /* ^ Bind the animation to viewport scroll progress */
-    animation-range: entry 0% cover 30%;
+    animation-range: entry 0% cover 20%;
     /* ^ The animation starts when the top edge enters, and finishes by the time it reaches 30% into view */
 }
 
