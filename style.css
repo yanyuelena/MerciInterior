@@ -151,13 +151,12 @@ body {
 .scroll-fade-right {
     /* animation part*/
     animation-name: fadeRight;
-    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;    
     /* ^ Attach the keyframe animation */
     animation-timeline: view();
     /* ^ Bind the animation to viewport scroll progress */
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 30%;
     /* ^ The animation starts when the top edge enters, and finishes by the time it reaches 30% into view */
 }
 
@@ -214,4 +213,19 @@ details p {
 
 .faqs {
     text-align: center;
+}
+
+#blinds img {
+    border: 1px solid black;
+    border-style: outset;
+    border-radius: 40px;
+    width: 310px;
+    height: 350px;
+    padding: 30px;
+    margin: 20px;
+}
+
+#blinds img:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    transform: scale(1.05);
 }
