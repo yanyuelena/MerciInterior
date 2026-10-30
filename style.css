@@ -26,6 +26,7 @@
     display: flex;
     justify-content: space-around;
     position: sticky;
+    align-items: center;
     top: 0; /* only works with position eg. sticky. Tells sticky "lock here when you reach the top of the screen"*/
     background-color: #191919;
     z-index: 1; /* make sure the header is on top of the background image */
@@ -33,9 +34,24 @@
 
 .header h1 {
     font-size: 45px;
-    margin: 0;
-    padding-top: 15px;
+    margin: 0px;
     color: white;
+}
+
+.header a {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.header a:hover {
+    color: rgb(205, 202, 202);
+    transform: scale(1.05);
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
 }
 
 .content {
@@ -58,9 +74,10 @@
     gap: 10px;
 }
 
-button {
+/* 30/11/2026 choose to not use button, use <a> to jump between sections */
+/*button {
     /* button design */
-    background-color: white;
+    /*background-color: white;
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -70,19 +87,19 @@ button {
     height: 60px;
 
     /* font design */
-    font-size: 20px;
+    /*font-size: 20px;
     color: black;
-    font-family: times new roman, sans-serif;
+    font-family: Georgia, serif;
     text-align: center;
 }
-
+/*
 button:hover {
     background-color: rgb(236, 236, 236);
     color: black;
     border: transparent;
     transform: scale(1.05);
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
-}
+} */
 
 body {
     margin: 0;
@@ -127,14 +144,14 @@ body {
 
 .scroll-fade-out {
     /* animation part*/
-    animation-name: fadeOut;
+    /*animation-name: fadeOut;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;    
     /* ^ Attach the keyframe animation */
-    animation-timeline: view();
+    /*animation-timeline: view();
     /* ^ Bind the animation to viewport scroll progress */
-    animation-range: entry 75% cover 30%;
+    /*animation-range: entry 75% cover 30%;
     /* ^ The animation starts when the top edge enters, and finishes by the time it reaches 30% into view */
 /*}
 
@@ -151,13 +168,17 @@ body {
 
 .scroll-fade-right {
     /* animation part*/
-    animation-name: fadeRight;
+    /*animation-name: fadeRight;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;    
     /* ^ Attach the keyframe animation */
-    animation-timeline: view();
+    /*animation-timeline: view();
     /* ^ Bind the animation to viewport scroll progress */
-    animation-range: entry 0% cover 30%;
+    /*animation-range: entry 0% cover 30%;
     /* ^ The animation starts when the top edge enters, and finishes by the time it reaches 30% into view */
 /*} */
+
+html {
+    scroll-behavior: smooth;
+}
