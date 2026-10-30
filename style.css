@@ -130,7 +130,7 @@ body {
     /* ^ The animation starts when the top edge enters, and finishes by the time it reaches 50% into view */
 }
 
-/* idk will use anot, code it first play play hahah 
+/* idk will use anot, code it first play play hahah */
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -144,16 +144,16 @@ body {
 
 .scroll-fade-out {
     /* animation part*/
-    /*animation-name: fadeOut;
+    animation-name: fadeOut;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;    
     /* ^ Attach the keyframe animation */
-    /*animation-timeline: view();
+    animation-timeline: view();
     /* ^ Bind the animation to viewport scroll progress */
-    /*animation-range: entry 75% cover 30%;
+    animation-range: entry 75% cover 30%;
     /* ^ The animation starts when the top edge enters, and finishes by the time it reaches 30% into view */
-/*}
+}
 
 @keyframes fadeRight {
     from {
@@ -168,16 +168,16 @@ body {
 
 .scroll-fade-right {
     /* animation part*/
-    /*animation-name: fadeRight;
+    animation-name: fadeRight;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;    
     /* ^ Attach the keyframe animation */
-    /*animation-timeline: view();
+    animation-timeline: view();
     /* ^ Bind the animation to viewport scroll progress */
-    /*animation-range: entry 0% cover 30%;
+    animation-range: entry 0% cover 30%;
     /* ^ The animation starts when the top edge enters, and finishes by the time it reaches 30% into view */
-/*} */
+}
 
 html {
     scroll-behavior: smooth;
