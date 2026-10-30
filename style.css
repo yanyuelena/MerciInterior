@@ -35,11 +35,11 @@
 .header h1 {
     font-size: 45px;
     margin: 0px;
-    color: white;
+    color: #f6f3e0;
 }
 
 .header a {
-    color: white;
+    color: #f6f3e0;
     font-size: 20px;
     font-family: Georgia, serif;
     margin-top: 10px;
@@ -49,14 +49,21 @@
 }
 
 .header a:hover {
-    color: rgb(205, 202, 202);
+    color: white;
     transform: scale(1.05);
-    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+    text-decoration: underline;
 }
 
 .content {
     grid-area: content;
     text-align: left;
+}
+
+.content h1 {
+    font-size: 50px;
+    margin: 10px;
+    color: black;
 }
 
 .contact {
@@ -109,7 +116,7 @@ body {
 @keyframes fadeIn {
     from { 
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to { 
         opacity: 1; 
@@ -120,9 +127,9 @@ body {
 .scroll-fade-in {
     /* animation part*/
     animation-name: fadeIn;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;    
+    animation-fill-mode: forwards;  
     /* ^ Attach the keyframe animation */
     animation-timeline: view();
     /* ^ Bind the animation to viewport scroll progress */
@@ -130,35 +137,10 @@ body {
     /* ^ The animation starts when the top edge enters, and finishes by the time it reaches 50% into view */
 }
 
-/* idk will use anot, code it first play play hahah */
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-}
-
-.scroll-fade-out {
-    /* animation part*/
-    animation-name: fadeOut;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;    
-    /* ^ Attach the keyframe animation */
-    animation-timeline: view();
-    /* ^ Bind the animation to viewport scroll progress */
-    animation-range: entry 75% cover 30%;
-    /* ^ The animation starts when the top edge enters, and finishes by the time it reaches 30% into view */
-}
-
 @keyframes fadeRight {
     from {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-30px);
     }
     to {
         opacity: 1;
@@ -181,4 +163,55 @@ body {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px
+}
+
+details {
+    cursor: pointer;
+    margin: auto;
+    margin-top: 0;
+    padding: 10px;
+    width: 800px;
+}
+
+summary {
+    list-style: none;
+    font-size: 18px;
+    font-family: Georgia, serif;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #191919;
+    color: #f6f3e0;
+    border-radius: 8px;
+}
+
+summary:hover {
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    transform: scale(1.05);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '+'; /* shows + when closed */
+    float: right;
+}
+
+details[open] summary::after {
+    content: '−'; /* shows - when open */
+}
+
+details p {
+    font-size: 18px;
+    font-family: Georgia, serif;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.faqs {
+    text-align: center;
 }
