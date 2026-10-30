@@ -248,12 +248,12 @@ details p {
 
 .blinds img {
     border: 1px solid black;
-    margin: center;
     border-radius: 40px;
     width: 310px;
     height: 350px;
     padding: 30px;
     margin: 20px;
+    transition: 0.5s;
 }
 
 .blinds img:hover {
